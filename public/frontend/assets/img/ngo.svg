@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf1f3"/><stop offset="1" stop-color="#bfd2d8"/></linearGradient></defs>
+  <rect width="900" height="540" fill="url(#bg)"/>
+  <circle cx="780" cy="80" r="180" fill="#f07a3f" opacity=".13"/>
+  <circle cx="100" cy="455" r="150" fill="#174f5f" opacity=".12"/>
+  <rect x="75" y="100" width="750" height="360" rx="28" fill="#ffffff" fill-opacity=".26"/><g stroke="#ffffff" stroke-opacity=".55" stroke-width="7"><path d="M120 420h660"/><path d="M150 150v255M310 150v255M470 150v255M630 150v255"/></g><g fill="#174f5f"><circle cx="180" cy="245" r="28"/><rect x="154" y="278" width="58" height="98" rx="20"/><circle cx="380" cy="245" r="28"/><rect x="354" y="278" width="58" height="98" rx="20"/><circle cx="580" cy="245" r="28"/><rect x="554" y="278" width="58" height="98" rx="20"/></g><g fill="#fff" stroke="#9db6be" stroke-width="5"><rect x="240" y="315" width="135" height="82" rx="12"/><rect x="445" y="315" width="135" height="82" rx="12"/><rect x="640" y="315" width="135" height="82" rx="12"/></g>
+  <rect x="60" y="414" width="780" height="84" rx="18" fill="#0f3946" opacity=".90"/>
+  <text x="90" y="457" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#fff">NGOs &amp; Projects</text>
+  <text x="90" y="485" font-family="Arial, sans-serif" font-size="18" fill="#dce9ec">Tender, campaign and field bags</text>
+</svg>

@@ -1,0 +1,36 @@
+@extends('frontend.master')
+
+@section('content')
+
+<section class="inner-hero">
+  <div class="inner-hero-bg"></div>
+  <div class="container position-relative"><h1 data-aos="fade-up">Services</h1></div>
+</section>
+<section class="section-padding services-page">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6" data-aos="fade-right"><h2>Our Core Services</h2><p>Use this page to describe complete bag manufacturing solutions, from custom design to large-scale bulk production. The layout follows the original service-page rhythm: opening text, service list, then industry-specific cards.</p><p>Present your team, factory capability, material options, design support and export-ready production process.</p></div>
+      <div class="col-lg-6" data-aos="fade-left"><img class="rounded-img" src="assets/img/service-workshop.svg" alt="service workshop"></div>
+    </div>
+    <div class="row g-4 mt-4">
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="0"><div class="service-item"><i class="fa-solid fa-industry"></i><div><h3>Bag Manufacturing & Supply</h3><p>As a high-volume factory, present your bag manufacturing and supply capability for custom requirements.</p></div></div></div><div class="col-md-6" data-aos="fade-up" data-aos-delay="70"><div class="service-item"><i class="fa-solid fa-pencil-ruler"></i><div><h3>Custom Bag Design</h3><p>Pattern, sample, measurement and branding support before moving into production.</p></div></div></div><div class="col-md-6" data-aos="fade-up" data-aos-delay="140"><div class="service-item"><i class="fa-solid fa-boxes-stacked"></i><div><h3>Bulk Bag Production</h3><p>Plan large orders with production scheduling, material sourcing and on-time delivery.</p></div></div></div><div class="col-md-6" data-aos="fade-up" data-aos-delay="210"><div class="service-item"><i class="fa-solid fa-handshake"></i><div><h3>CM Solution</h3><p>Provide sewing or complete contract manufacturing support for brand-side operations.</p></div></div></div><div class="col-md-6" data-aos="fade-up" data-aos-delay="280"><div class="service-item"><i class="fa-solid fa-store"></i><div><h3>Wholesale Bag Supply</h3><p>Support wholesale owners with repeatable production and consistent quality.</p></div></div></div><div class="col-md-6" data-aos="fade-up" data-aos-delay="350"><div class="service-item"><i class="fa-solid fa-tags"></i><div><h3>Private Label Bag Solutions</h3><p>Help brands create bags with their own label, packaging and custom details.</p></div></div></div>
+    </div>
+  </div>
+</section>
+<section class="section-padding bg-soft industry-segments">
+  <div class="container">
+    <h2 class="section-title text-center">For Whom We Manufacture Bags</h2>
+    <div class="segment-list mt-4">
+      <div class="segment-card" data-aos="fade-up"><div class="segment-text"><h3>Banks & Financial Institutions</h3><p>Design this section for the buyer group, order type and use case. Add product suggestions, MOQ and campaign goals.</p><h4>Types of Bags Mostly Ordered:</h4><ul><li>Backpacks</li><li>Laptop Bags</li><li>Seminar Bag</li><li>Promotional Bag</li><li>Branding Bag</li><li>Travel Bags</li></ul><a class="btn btn-theme btn-sm" href="custom-bag.html">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a></div><img src="assets/img/bank.svg" alt="Banks & Financial Institutions"></div><div class="segment-card" data-aos="fade-up"><div class="segment-text"><h3>Telecom & Mobile Companies</h3><p>Design this section for the buyer group, order type and use case. Add product suggestions, MOQ and campaign goals.</p><h4>Types of Bags Mostly Ordered:</h4><ul><li>Non-woven Tote Bags</li><li>Drawstring Bags</li><li>Backpacks</li><li>Laptop Bags</li><li>Jute Tote Bags</li></ul><a class="btn btn-theme btn-sm" href="custom-bag.html">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a></div><img src="assets/img/telecom.svg" alt="Telecom & Mobile Companies"></div><div class="segment-card" data-aos="fade-up"><div class="segment-text"><h3>Educational & Training Institutes</h3><p>Design this section for the buyer group, order type and use case. Add product suggestions, MOQ and campaign goals.</p><h4>Types of Bags Mostly Ordered:</h4><ul><li>Backpacks</li><li>Seminar & Conference Bags</li><li>Canvas Bags</li></ul><a class="btn btn-theme btn-sm" href="custom-bag.html">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a></div><img src="assets/img/education.svg" alt="Educational & Training Institutes"></div><div class="segment-card" data-aos="fade-up"><div class="segment-text"><h3>Pharmaceutical & Healthcare Companies</h3><p>Design this section for the buyer group, order type and use case. Add product suggestions, MOQ and campaign goals.</p><h4>Types of Bags Mostly Ordered:</h4><ul><li>Briefcase</li><li>Backpack</li><li>Tote Bags</li><li>Sling Bags</li></ul><a class="btn btn-theme btn-sm" href="custom-bag.html">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a></div><img src="assets/img/pharma.svg" alt="Pharmaceutical & Healthcare Companies"></div><div class="segment-card" data-aos="fade-up"><div class="segment-text"><h3>NGOs & International Organizations</h3><p>Design this section for the buyer group, order type and use case. Add product suggestions, MOQ and campaign goals.</p><h4>Types of Bags Mostly Ordered:</h4><ul><li>Backpacks</li><li>Eco-friendly Bags</li><li>Seminar Bags</li><li>Messenger Bags</li><li>School Bags</li><li>Duffel Bags</li></ul><a class="btn btn-theme btn-sm" href="custom-bag.html">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a></div><img src="assets/img/ngo.svg" alt="NGOs & International Organizations"></div><div class="segment-card" data-aos="fade-up"><div class="segment-text"><h3>Government Ministry</h3><p>Design this section for the buyer group, order type and use case. Add product suggestions, MOQ and campaign goals.</p><h4>Types of Bags Mostly Ordered:</h4><ul><li>Backpacks</li><li>Laptop Bags</li><li>Conference Bags</li></ul><a class="btn btn-theme btn-sm" href="custom-bag.html">Get Started <i class="fa-solid fa-arrow-right ms-1"></i></a></div><img src="assets/img/government.svg" alt="Government Ministry"></div>
+    </div>
+  </div>
+</section>
+
+<section class="clients-strip">
+  <div class="container text-center" data-aos="fade-up">
+    <h3 class="mini-title">Our Valuable Clients</h3>
+    <div class="client-grid"><div class="client-logo">realme</div><div class="client-logo">MetLife</div><div class="client-logo">LUX</div><div class="client-logo">Rahimafrooz</div><div class="client-logo">Stamford</div><div class="client-logo">ISPAHANI</div><div class="client-logo">Plus Point</div><div class="client-logo">RIMLO</div><div class="client-logo">KONKA</div><div class="client-logo">Tactical</div><div class="client-logo">Chemomics</div><div class="client-logo">KSRM</div><div class="client-logo">ICT Division</div><div class="client-logo">Codelling</div><div class="client-logo">World Vision</div><div class="client-logo">UKaid</div></div>
+  </div>
+</section>
+
+@endsection

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf1f3"/><stop offset="1" stop-color="#bfd2d8"/></linearGradient></defs>
+  <rect width="900" height="540" fill="url(#bg)"/>
+  <circle cx="780" cy="80" r="180" fill="#f07a3f" opacity=".13"/>
+  <circle cx="100" cy="455" r="150" fill="#174f5f" opacity=".12"/>
+  <path d="M90 320C210 210 330 355 450 220S675 270 810 150" fill="none" stroke="#f07a3f" stroke-width="9" stroke-dasharray="18 14"/><circle cx="90" cy="320" r="24" fill="#f07a3f"/><circle cx="810" cy="150" r="24" fill="#174f5f"/><g stroke="#c7d6da" stroke-width="5"><path d="M70 105h760M70 210h760M70 315h760M70 420h760M180 70v390M330 70v390M520 70v390M700 70v390"/></g>
+  <rect x="60" y="414" width="780" height="84" rx="18" fill="#0f3946" opacity=".90"/>
+  <text x="90" y="457" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#fff">Client Visit Facility</text>
+  <text x="90" y="485" font-family="Arial, sans-serif" font-size="18" fill="#dce9ec">Corporate office and sample room location</text>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="90" viewBox="0 0 220 90" role="img" aria-label="NNT logo">
+  <rect width="220" height="90" rx="16" fill="#ffffff"/>
+  <g transform="translate(24 20)">
+    <circle cx="28" cy="35" r="14" fill="#f07a3f"/>
+    <path d="M21 35l7-12 7 12h-5v9h-4v-9z" fill="#184f5e"/>
+    <path d="M50 12h22l28 42V12h20v56H98L70 27v41H50z" fill="#174f5f"/>
+    <path d="M110 12h20v20l42-20h26l-48 23 44 33h-28l-36-28v28h-20z" fill="#174f5f"/>
+    <path d="M54 9h24l22 33V9h18v7L104 49H86L62 14v42H54z" fill="#0f3946" opacity=".28"/>
+  </g>
+</svg>

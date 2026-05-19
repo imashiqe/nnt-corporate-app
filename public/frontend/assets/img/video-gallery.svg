@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="540" viewBox="0 0 900 540">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#eaf1f3"/><stop offset="1" stop-color="#bfd2d8"/></linearGradient></defs>
+  <rect width="900" height="540" fill="url(#bg)"/>
+  <circle cx="780" cy="80" r="180" fill="#f07a3f" opacity=".13"/>
+  <circle cx="100" cy="455" r="150" fill="#174f5f" opacity=".12"/>
+  <rect x="80" y="85" width="740" height="405" rx="28" fill="#173f4d"/><g opacity=".55"><rect x="120" y="125" width="190" height="140" rx="15" fill="#fff"/><rect x="355" y="125" width="190" height="140" rx="15" fill="#fff"/><rect x="590" y="125" width="190" height="140" rx="15" fill="#fff"/><rect x="120" y="300" width="190" height="140" rx="15" fill="#fff"/><rect x="355" y="300" width="190" height="140" rx="15" fill="#fff"/><rect x="590" y="300" width="190" height="140" rx="15" fill="#fff"/></g><circle cx="450" cy="288" r="64" fill="#f07a3f"/><path d="M432 250l58 38-58 38z" fill="#fff"/>
+  <rect x="60" y="414" width="780" height="84" rx="18" fill="#0f3946" opacity=".90"/>
+  <text x="90" y="457" font-family="Arial, sans-serif" font-size="34" font-weight="800" fill="#fff">Video Gallery</text>
+  <text x="90" y="485" font-family="Arial, sans-serif" font-size="18" fill="#dce9ec">Factory videos and project highlights</text>
+</svg>
