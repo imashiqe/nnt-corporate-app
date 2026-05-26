@@ -1258,3 +1258,17 @@ h3 {
         height: 180px;
     }
 }
+
+/* testimonial */
+
+.testimonial-card img {
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 15px auto;
+    display: block;
+}
+
+.testimonial-card .stars {
+    color: #ffc107;
+    margin-bottom: 10px;
+}

@@ -3,15 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Gallery;
+use App\Models\Testimonial;
 
 class FrontendController extends Controller
 {
     public function index()
     {
         $galleries = Gallery::latest()->get();
-
-        return view('frontend.main', compact('galleries'));
+         $testimonials = Testimonial::latest()->get();
+        return view('frontend.main', compact('galleries', 'testimonials'));
     }
+
+
+     
+
+  
 
     public function about()
     {

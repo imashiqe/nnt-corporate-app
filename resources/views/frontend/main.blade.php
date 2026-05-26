@@ -127,34 +127,86 @@
 </section>
   {{-- gallery end --}}
 
-<section class="testimonials section-padding" id="testimonials">
-  <div class="container text-center">
-    <span class="section-label"><i class="fa-solid fa-comments"></i> Testimonial</span>
-    <h2 class="section-title">What Our Clients Say?</h2>
-    <div class="swiper testimonial-swiper mt-4">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide"><div class="testimonial-card"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Good factory and professional communication.</p><h4>Md Romjan</h4><small>Verified client review</small></div></div><div class="swiper-slide"><div class="testimonial-card"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Best bag manufacturing company experience.</p><h4>Bagora</h4><small>Verified client review</small></div></div><div class="swiper-slide"><div class="testimonial-card"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Reliable partner for bulk bag production.</p><h4>ShopZilla BD</h4><small>Verified client review</small></div></div><div class="swiper-slide"><div class="testimonial-card"><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p>Quality products and responsive service.</p><h4>Adnan Hossain</h4><small>Verified client review</small></div></div>
-      </div>
-      <div class="swiper-pagination"></div>
-    </div>
-  </div>
-</section>
+
 
 {{-- testimonials --}}
-<section class="values section-padding bg-soft">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6" data-aos="fade-right"><img class="rounded-img" src="assets/img/about-factory.svg" alt="values"></div>
-      <div class="col-lg-6" data-aos="fade-left">
-        <span class="section-label"><i class="fa-solid fa-shield-heart"></i> Core Values</span>
-        <h2>Values That Keep Us Ahead</h2>
-        <p>Strong values make a manufacturing partner easier to trust. Highlight quality, reliable timelines, collaboration and responsible production here.</p>
-        <div class="check-grid"><span><i class="fa-solid fa-check"></i> Global Compliance</span><span><i class="fa-solid fa-check"></i> Uncompromised Quality</span><span><i class="fa-solid fa-check"></i> Skilled Workforce</span><span><i class="fa-solid fa-check"></i> On-Time Delivery</span><span><i class="fa-solid fa-check"></i> Customer Collaboration</span><span><i class="fa-solid fa-check"></i> Sustainable Production</span></div>
-        <a href="custom-bag.html" class="btn btn-theme mt-4">Get Free Quote <i class="fa-solid fa-arrow-right ms-2"></i></a>
-      </div>
+<section class="testimonials section-padding" id="testimonials">
+    <div class="container text-center">
+
+        <span class="section-label">
+            <i class="fa-solid fa-comments"></i>
+            Testimonial
+        </span>
+
+        <h2 class="section-title">
+            What Our Clients Say?
+        </h2>
+
+        <div class="swiper testimonial-swiper mt-4">
+
+            <div class="swiper-wrapper">
+
+                @forelse($testimonials as $testimonial)
+
+                <div class="swiper-slide">
+
+                    <div class="testimonial-card">
+
+                        <div class="stars">
+
+                            @for($i=1; $i<=$testimonial->rating; $i++)
+                                <i class="fa-solid fa-star"></i>
+                            @endfor
+
+                        </div>
+
+                        <p>
+                            {{ $testimonial->review }}
+                        </p>
+
+                        @if($testimonial->image)
+
+                        <img
+                            src="{{ asset('storage/'.$testimonial->image) }}"
+                            class="rounded-circle mb-3"
+                            width="70"
+                            height="70"
+                            alt="{{ $testimonial->name }}"
+                        >
+
+                        @endif
+
+                        <h4>
+                            {{ $testimonial->name }}
+                        </h4>
+
+                        <small>
+                            {{ $testimonial->designation }}
+                        </small>
+
+                    </div>
+
+                </div>
+
+                @empty
+
+                <div class="swiper-slide">
+                    <div class="testimonial-card">
+                        <p>No testimonials available.</p>
+                    </div>
+                </div>
+
+                @endforelse
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
     </div>
-  </div>
 </section>
+{{-- testimonials end --}}
 <section class="strengths section-padding">
   <div class="container text-center">
     <span class="section-label"><i class="fa-solid fa-chart-simple"></i> Capabilities</span>
