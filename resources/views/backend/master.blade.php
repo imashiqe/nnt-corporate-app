@@ -395,6 +395,7 @@
                   <p>LEAD</p>
                 </a>
               </li>
+              {{-- Gallery --}}
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-box-seam-fill"></i>
@@ -419,6 +420,31 @@
                   
                 </ul>
               </li>
+        {{-- client --}}
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-people-fill"></i>
+                  <p>
+                  Client
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('client.create') }}" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Create</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ route('client.index') }}" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>View</p>
+                    </a>
+                  </li>
+                  
+                </ul>
+              {{-- testimonial --}}
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-people-fill"></i>
@@ -444,7 +470,7 @@
                 </ul>
             </ul>
 
-
+          
            
             <!--end::Sidebar Menu-->
           </nav>

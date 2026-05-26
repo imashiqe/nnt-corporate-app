@@ -38,13 +38,44 @@
     <div class="swiper-pagination"></div>
   </div>
 </section>
-
+{{-- brand --}}
 <section class="clients-strip light">
-  <div class="container text-center" data-aos="fade-up">
-    <h3 class="mini-title">Our Valuable Clients</h3>
-    <div class="client-grid"><div class="client-logo">realme</div><div class="client-logo">MetLife</div><div class="client-logo">LUX</div><div class="client-logo">Rahimafrooz</div><div class="client-logo">Stamford</div><div class="client-logo">ISPAHANI</div><div class="client-logo">Plus Point</div><div class="client-logo">RIMLO</div><div class="client-logo">KONKA</div><div class="client-logo">Tactical</div><div class="client-logo">Chemomics</div><div class="client-logo">KSRM</div><div class="client-logo">ICT Division</div><div class="client-logo">Codelling</div><div class="client-logo">World Vision</div><div class="client-logo">UKaid</div></div>
-  </div>
+
+    <div class="container text-center"
+         data-aos="fade-up">
+
+        <h3 class="mini-title">
+            Our Valuable Clients
+        </h3>
+
+        <div class="client-grid">
+
+            @forelse($clients as $client)
+
+            <div class="client-logo">
+
+                <img src="{{ asset('storage/'.$client->logo) }}"
+                     alt="{{ $client->name }}"
+                     class="img-fluid">
+
+                <span>
+                    {{ $client->name }}
+                </span>
+
+            </div>
+
+            @empty
+
+            <p>No Clients Available</p>
+
+            @endforelse
+
+        </div>
+
+    </div>
+
 </section>
+{{-- end brand --}}
 <section class="about-preview section-padding">
   <div class="container">
     <div class="row align-items-center g-5">

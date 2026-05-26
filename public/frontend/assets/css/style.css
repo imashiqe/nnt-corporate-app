@@ -1272,3 +1272,35 @@ h3 {
     color: #ffc107;
     margin-bottom: 10px;
 }
+
+/* client */
+
+.client-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.client-logo {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.client-logo img {
+    max-height: 70px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.client-logo span {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.client-logo:hover {
+    transform: translateY(-5px);
+}

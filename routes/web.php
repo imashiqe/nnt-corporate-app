@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProfileController;
@@ -25,6 +26,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
 
     Route::resource('gallery', GalleryController::class);
     Route::resource('testimonial', TestimonialController::class);
+    Route::resource('client', ClientController::class);
 
 });
 
