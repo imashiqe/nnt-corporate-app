@@ -11,7 +11,8 @@
     <meta name="theme-color" content="#007bff" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#1a1a1a" media="(prefers-color-scheme: dark)" />
     <!--end::Accessibility Meta Tags-->
-
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
     <!--begin::Primary Meta Tags-->
     <meta name="title" content="NNT | Dashboard " />
     <meta name="author" content="ColorlibHQ" />
@@ -24,7 +25,7 @@
       content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard, accessible admin panel, WCAG compliant"
     />
     <!--end::Primary Meta Tags-->
-
+    
     <!--begin::Accessibility Features-->
     <!-- Skip links will be dynamically added by accessibility.js -->
     <meta name="supported-color-schemes" content="light dark" />
@@ -611,7 +612,38 @@
     <!--end::Color Mode Toggle-->
 
     <!-- OPTIONAL SCRIPTS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script>
+toastr.options = {
+    closeButton: true,
+    progressBar: true,
+    positionClass: "toast-top-right",
+    timeOut: 3000
+};
+</script>
+
+@if(session('success'))
+<script>
+toastr.success("{{ session('success') }}");
+</script>
+@endif
+
+@if(session('error'))
+<script>
+toastr.error("{{ session('error') }}");
+</script>
+@endif
+
+@if($errors->any())
+<script>
+@foreach($errors->all() as $error)
+toastr.error("{{ $error }}");
+@endforeach
+</script>
+@endif
     <!-- apexcharts -->
     <script
       src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
