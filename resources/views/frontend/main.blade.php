@@ -91,17 +91,42 @@
     </div>
   </div>
 </section>
-
+{{-- gallery   --}}
 <section class="gallery section-padding bg-soft">
   <div class="container text-center">
     <span class="section-label"><i class="fa-solid fa-images"></i> Product Gallery</span>
     <h2 class="section-title">Bags We've Created</h2>
     <div class="gallery-filter"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="backpack">Backpack</button><button class="filter-btn" data-filter="office">Office Bags</button><button class="filter-btn" data-filter="crossbody">Crossbody Bags</button><button class="filter-btn" data-filter="sports">Sports Bags</button><button class="filter-btn" data-filter="accessory">Accessory Bags</button><button class="filter-btn" data-filter="jute">Jute Bag</button></div>
     <div class="row g-4 gallery-grid mt-2">
-      <div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="backpack" data-aos="fade-up"><div class="gallery-card"><img src="assets/img/bag-backpack.svg" alt="St. Gregory School Backpack"><div class="gallery-hover"><span>Backpack</span><h3>St. Gregory School Backpack</h3></div></div></div><div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="backpack" data-aos="fade-up"><div class="gallery-card"><img src="assets/img/bag-school.svg" alt="Stamford Admission Backpack"><div class="gallery-hover"><span>Backpack</span><h3>Stamford Admission Backpack</h3></div></div></div><div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="crossbody" data-aos="fade-up"><div class="gallery-card"><img src="assets/img/bag-crossbody.svg" alt="Akij Crossbody Chest Bag"><div class="gallery-hover"><span>Accessory Bags</span><h3>Akij Crossbody Chest Bag</h3></div></div></div><div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="accessory" data-aos="fade-up"><div class="gallery-card"><img src="assets/img/bag-accessory.svg" alt="Lux Promotional Pouch"><div class="gallery-hover"><span>Accessory Bags</span><h3>Lux Promotional Pouch</h3></div></div></div><div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="sports" data-aos="fade-up"><div class="gallery-card"><img src="assets/img/bag-sports.svg" alt="Plus Point Sports Duffel"><div class="gallery-hover"><span>Sports Bags</span><h3>Plus Point Sports Duffel</h3></div></div></div><div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="travel" data-aos="fade-up"><div class="gallery-card"><img src="assets/img/bag-travel.svg" alt="Konka Travel Bag"><div class="gallery-hover"><span>Travel Bags</span><h3>Konka Travel Bag</h3></div></div></div><div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="jute" data-aos="fade-up"><div class="gallery-card"><img src="assets/img/bag-jute.svg" alt="Sonali Bank Jute Tote"><div class="gallery-hover"><span>Jute Bag</span><h3>Sonali Bank Jute Tote</h3></div></div></div><div class="col-6 col-md-4 col-lg-3 gallery-item" data-category="office" data-aos="fade-up"><div class="gallery-card"><img src="assets/img/bag-office.svg" alt="Corporate Office Laptop Bag"><div class="gallery-hover"><span>Office Bags</span><h3>Corporate Office Laptop Bag</h3></div></div></div>
+     @forelse($galleries as $gallery)
+
+<div class="col-6 col-md-4 col-lg-3 gallery-item"
+     data-category="{{ $gallery->category }}">
+     
+    <div class="gallery-card">
+        <img src="{{ asset('storage/'.$gallery->image) }}"
+             alt="{{ $gallery->title }}">
+
+        <div class="gallery-hover">
+            <span>{{ ucfirst($gallery->category) }}</span>
+            <h3>{{ $gallery->title }}</h3>
+        </div>
+    </div>
+
+</div>
+
+@empty
+
+<div class="col-12">
+    <p class="text-center">No Gallery Items Found</p>
+</div>
+
+@endforelse
     </div>
   </div>
 </section>
+  {{-- gallery end --}}
+
 <section class="testimonials section-padding" id="testimonials">
   <div class="container text-center">
     <span class="section-label"><i class="fa-solid fa-comments"></i> Testimonial</span>
@@ -114,6 +139,8 @@
     </div>
   </div>
 </section>
+
+{{-- testimonials --}}
 <section class="values section-padding bg-soft">
   <div class="container">
     <div class="row align-items-center g-5">
@@ -212,5 +239,22 @@
   </div>
 </section>
 
+
+<script>
+$('.filter-btn').click(function () {
+
+    $('.filter-btn').removeClass('active');
+    $(this).addClass('active');
+
+    let category = $(this).data('filter');
+
+    if(category === 'all'){
+        $('.gallery-item').show();
+    }else{
+        $('.gallery-item').hide();
+        $('.gallery-item[data-category="'+category+'"]').show();
+    }
+});
+</script>
 
 @endsection

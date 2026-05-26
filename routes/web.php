@@ -1,31 +1,17 @@
 <?php
 
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('frontend.main');
-});
+Route::get('/', [FrontendController::class, 'index']);
+Route::get('/about-us', [FrontendController::class, 'about']);
+Route::get('/services', [FrontendController::class, 'services']);
+Route::get('/custom-bag', [FrontendController::class, 'customBag']);
+Route::get('/blog', [FrontendController::class, 'blog']);
 
-Route::get('/about-us', function () {
-    return view('frontend.pages.about');
-});
-
-Route::get('/services', function () {
-    return view('frontend.pages.services');
-});
-
-Route::get('/custom-bag', function () {
-    return view('frontend.pages.custombag');
-});
-
-Route::get('/blog', function () {
-    return view('frontend.pages.blog.blog');
-});
-
-Route::get('/blog/{id}', function ($id) {
-    return view('frontend.pages.blog.blogdetails');
-});
+Route::get('/blog/{id}', [FrontendController::class, 'blogDetails']);
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
 
@@ -34,6 +20,10 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
         return view('backend.dashboard');
 
     })->name('dashboard');
+
+//   Route::prefix('admin')->group(function () {
+    Route::resource('gallery', GalleryController::class);
+// });
 
 });
 
