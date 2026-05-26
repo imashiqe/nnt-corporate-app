@@ -140,7 +140,7 @@ h3 {
     padding: 22px 0;
     transition: 0.3s ease;
 }
-.site-header .sticky {
+.site-header.sticky {
     position: fixed;
     background: rgba(13, 50, 61, 0.94);
     box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
@@ -159,7 +159,7 @@ h3 {
 }
 .navbar-brand img {
     width: 150px;
-    height: 136px;
+    height: 52px;
     object-fit: contain;
 }
 .navbar-collapse {
@@ -177,7 +177,7 @@ h3 {
     color: #fff !important;
     text-transform: uppercase;
     font-size: 14px;
-    padding: 10px 14px !important;
+    padding: 21px 14px !important;
     opacity: 0.98;
 }
 .nav-link.active,
@@ -222,7 +222,6 @@ h3 {
 .hero-content p {
     max-width: 570px;
     font-size: 20px;
-    text-align: center;
     margin-bottom: 28px;
 }
 .eyebrow {
@@ -261,7 +260,7 @@ h3 {
     inset: 0;
     background:
         linear-gradient(rgba(20, 79, 95, 0.88), rgba(20, 79, 95, 0.88)),
-        url("../img/factory-bg.jpg");
+        url("../img/factory-bg.svg");
     background-size: cover;
     background-position: center;
 }
