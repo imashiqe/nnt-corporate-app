@@ -5,6 +5,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\VideoController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [FrontendController::class, 'index']);
@@ -27,6 +28,7 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('gallery', GalleryController::class);
     Route::resource('testimonial', TestimonialController::class);
     Route::resource('client', ClientController::class);
+    Route::resource('video', VideoController::class);
 
 });
 

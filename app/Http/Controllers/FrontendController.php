@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Client;
 use App\Models\Gallery;
 use App\Models\Testimonial;
+use App\Models\Video;
 
 class FrontendController extends Controller
 {
@@ -13,7 +14,8 @@ class FrontendController extends Controller
         $galleries = Gallery::latest()->get();
          $testimonials = Testimonial::latest()->get();
           $clients = Client::latest()->get();
-        return view('frontend.main', compact('galleries', 'testimonials', 'clients'));
+          $videos = Video::latest()->get();
+        return view('frontend.main', compact('galleries', 'testimonials', 'clients', 'videos'));
     }
 
 

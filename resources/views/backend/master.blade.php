@@ -445,6 +445,37 @@
                   </li>
                   
                 </ul>
+                </li>
+{{-- video --}}
+                  <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon bi bi-collection-play-fill"></i>
+                  <p>
+                  Video
+                    <i class="nav-arrow bi bi-chevron-right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{{ route('video.create') }}" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>Create</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{{ route('video.index') }}" class="nav-link">
+                      <i class="nav-icon bi bi-circle"></i>
+                      <p>View</p>
+                    </a>
+                  </li>
+                  
+                </ul>
+            </li>
+            </li>
+
+            
+          
+                {{-- video --}}
               {{-- testimonial --}}
               <li class="nav-item">
                 <a href="#" class="nav-link">
@@ -470,8 +501,14 @@
                   
                 </ul>
             </ul>
+            </li>
+            </li>
 
-          
+            
+{{-- video --}}
+            
+            
+
            
             <!--end::Sidebar Menu-->
           </nav>
@@ -803,6 +840,8 @@ toastr.error("{{ $error }}");
       // - END PIE CHART -
       //-----------------
     </script>
+
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
     <!--end::Script-->
   </body>
   <!--end::Body-->

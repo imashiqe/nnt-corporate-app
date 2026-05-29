@@ -247,43 +247,167 @@
     </div>
   </div>
 </section>
-<section class="unique section-padding bg-soft">
-  <div class="container">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-7" data-aos="fade-right">
-        <span class="section-label"><i class="fa-solid fa-wand-magic-sparkles"></i> Why Partner With Us</span>
-        <h2>Things That Make Us Unique</h2>
-        <div class="unique-list">
-          <div><i class="fa-solid fa-angle-right"></i><h4>Over 40 Years of Industry Legacy</h4><p>Showcase long experience and category knowledge.</p></div><div><i class="fa-solid fa-angle-right"></i><h4>Family-Run Expertise</h4><p>A hands-on team that cares about accountability.</p></div><div><i class="fa-solid fa-angle-right"></i><h4>Strong Industry Roots</h4><p>Material sourcing and production relationships.</p></div><div><i class="fa-solid fa-angle-right"></i><h4>Trusted by Top Brands</h4><p>A flexible partner for corporate and institution orders.</p></div><div><i class="fa-solid fa-angle-right"></i><h4>Corporate Gift Expertise</h4><p>Premium branded gifts and promotional bag sets.</p></div><div><i class="fa-solid fa-angle-right"></i><h4>Sustainability & Quality Standards</h4><p>Responsible production and durable products.</p></div>
+{{-- unique start --}}
+<section class="unique-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Left Content -->
+            <div class="col-lg-7">
+                <span class="section-tag">
+                    <i class="fa-solid fa-house"></i>
+                    Why partner with us for bag manufacturing?
+                </span>
+
+                <h2 class="section-title">
+                    THINGS THAT MAKE US UNIQUE
+                </h2>
+
+                <div class="features-grid">
+
+                    <div class="feature-item">
+                        <span class="feature-number">01</span>
+                        <h4>Over 40 Years of Industry Legacy</h4>
+                        <p>With over four decades of family-owned experience, we bring deep industry knowledge and proven manufacturing excellence to the bag industry.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-number">02</span>
+                        <h4>Family-Run Expertise</h4>
+                        <p>A multi-generational family business where hands-on involvement ensures consistency, accountability and long-term commitment to quality.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-number">03</span>
+                        <h4>Strong Industry Roots</h4>
+                        <p>Our foundation is built on long-standing industry relationships and operational expertise.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-number">04</span>
+                        <h4>Collaborations with Leading Material Suppliers</h4>
+                        <p>We partner with trusted suppliers to ensure superior quality, durability and consistency.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-number">05</span>
+                        <h4>Extensive Network with Local & Export Bag Factories</h4>
+                        <p>Our established network enables scalable production and flexible manufacturing solutions.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-number">06</span>
+                        <h4>Trusted by Top Brands & Organizations</h4>
+                        <p>We are a reliable manufacturing partner trusted by leading brands and organizations.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-number">07</span>
+                        <h4>Corporate Gift Expertise</h4>
+                        <p>We help clients create premium branded gifts and promotional items using our bags.</p>
+                    </div>
+
+                    <div class="feature-item">
+                        <span class="feature-number">08</span>
+                        <h4>Sustainability & Quality Standards</h4>
+                        <p>Commitment to responsible manufacturing and long-lasting products.</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="col-lg-5">
+                <div class="image-wrapper">
+                    <img src="{{ asset('frontend/assets/img/What-Makes-Us-Unique.jpg') }}"
+                        class="img-fluid"
+                        alt="Bag Manufacturing">
+                </div>
+            </div>
+
         </div>
-      </div>
-      <div class="col-lg-5" data-aos="fade-left"><img class="rounded-img" src="assets/img/bags-scene.svg" alt="bags"></div>
     </div>
-  </div>
 </section>
+{{-- video part start --}}
 <section class="video-section section-padding">
-  <div class="container text-center">
-    <span class="section-label"><i class="fa-solid fa-video"></i> Videos</span>
-    <h2 class="section-title">Our Video Gallery</h2>
-    <div class="row g-4 mt-3">
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="0"><a class="video-card" href="#"><img src="assets/img/blog-1.svg" alt="video"><span><i class="fa-solid fa-play"></i></span></a></div><div class="col-md-4" data-aos="zoom-in" data-aos-delay="80"><a class="video-card" href="#"><img src="assets/img/blog-2.svg" alt="video"><span><i class="fa-solid fa-play"></i></span></a></div><div class="col-md-4" data-aos="zoom-in" data-aos-delay="160"><a class="video-card" href="#"><img src="assets/img/blog-3.svg" alt="video"><span><i class="fa-solid fa-play"></i></span></a></div><div class="col-md-4" data-aos="zoom-in" data-aos-delay="240"><a class="video-card" href="#"><img src="assets/img/blog-4.svg" alt="video"><span><i class="fa-solid fa-play"></i></span></a></div><div class="col-md-4" data-aos="zoom-in" data-aos-delay="320"><a class="video-card" href="#"><img src="assets/img/blog-1.svg" alt="video"><span><i class="fa-solid fa-play"></i></span></a></div><div class="col-md-4" data-aos="zoom-in" data-aos-delay="400"><a class="video-card" href="#"><img src="assets/img/blog-2.svg" alt="video"><span><i class="fa-solid fa-play"></i></span></a></div>
+
+    <div class="container text-center">
+
+        <span class="section-label">
+            <i class="fa-solid fa-video"></i>
+            Videos
+        </span>
+
+        <h2 class="section-title">
+            Our Video Gallery
+        </h2>
+
+        <div class="row g-4 mt-3">
+@php
+
+function getYoutubeId($url)
+{
+    preg_match(
+        '/(?:youtube\.com\/shorts\/|youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/',
+        $url,
+        $matches
+    );
+
+    return $matches[1] ?? '';
+}
+
+@endphp
+            @foreach($videos as $video)
+
+            @php
+                $videoId = getYoutubeId($video->youtube_url);
+            @endphp
+
+            <div class="col-md-4"
+                 data-aos="zoom-in">
+
+                <a class="video-card"
+                   data-bs-toggle="modal"
+                   data-bs-target="#videoModal"
+                   onclick="playVideo('{{ $videoId }}')">
+
+                    <img src="https://img.youtube.com/vi/{{ $videoId }}/hqdefault.jpg"
+                         alt="{{ $video->title }}">
+
+                    <span>
+                        <i class="fa-solid fa-play"></i>
+                    </span>
+
+                </a>
+
+            </div>
+
+            @endforeach
+
+        </div>
+
     </div>
-  </div>
+
 </section>
+{{-- video part start --}}
+
+{{-- location start --}}
 <section class="visit section-padding bg-soft">
   <div class="container">
     <div class="row align-items-center g-5">
-      <div class="col-lg-6" data-aos="fade-right"><img class="rounded-img" src="assets/img/map.svg" alt="map"></div>
+      <div class="col-lg-6" data-aos="fade-right"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.8367430758212!2d90.40822281190478!3d23.717523378604017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b96252f59bed%3A0xb696da25905175d7!2sNNT%20Bag%20Manufacturer!5e0!3m2!1sen!2sbd!4v1780078110870!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
       <div class="col-lg-6" data-aos="fade-left">
         <span class="section-label"><i class="fa-solid fa-location-dot"></i> Visit Now</span>
         <h2>Corporate Client Visit & Professional Sampling Facility</h2>
         <p>Invite corporate clients to review material, inspect stitching quality, approve samples and finalize branding before bulk production.</p>
         <ul class="tick-list"><li>Manufacturing operation walkthrough.</li><li>Assessment of quality, design and durability.</li><li>Collaboration with expert team for custom branding.</li></ul>
-        <a class="btn btn-theme" href="custom-bag.html">Get Started <i class="fa-solid fa-arrow-right ms-2"></i></a>
+        <a class="btn btn-theme" href="/custom-bag">Get Started <i class="fa-solid fa-arrow-right ms-2"></i></a>
       </div>
     </div>
   </div>
 </section>
+{{-- location end --}}
+{{-- BLOG --}}
 <section class="blogs section-padding">
   <div class="container text-center">
     <span class="section-label"><i class="fa-solid fa-newspaper"></i> Blogs</span>

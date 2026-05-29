@@ -86,7 +86,54 @@
   </div>
 </footer>
 <div class="chat-widget"><span>Chat with us <i class="fa-regular fa-hand-wave"></i></span><button aria-label="Open chat"><i class="fa-solid fa-comment-dots"></i></button><em>1</em></div>
+{{-- extra dive --}}
+<div class="modal fade"
+     id="videoModal"
+     tabindex="-1">
 
+    <div class="modal-dialog modal-lg">
+
+        <div class="modal-content">
+
+            <div class="modal-body p-0">
+
+                <iframe id="youtubeFrame"
+                        width="100%"
+                        height="500"
+                        src=""
+                        allowfullscreen>
+                </iframe>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+{{-- extra dive end --}}
+<script>
+function playVideo(videoId)
+{
+    document.getElementById('youtubeFrame').src =
+        "https://www.youtube.com/embed/" +
+        videoId +
+        "?autoplay=1";
+}
+
+document
+.getElementById('videoModal')
+.addEventListener(
+    'hidden.bs.modal',
+    function () {
+
+        document
+        .getElementById('youtubeFrame')
+        .src = '';
+
+    }
+);
+</script>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
