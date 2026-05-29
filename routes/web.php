@@ -43,5 +43,8 @@ Route::get('/blog', [FrontendController::class, 'blog'])
 
 Route::get('/blog/{slug}', [FrontendController::class, 'blogDetails'])
     ->name('blog.details');
-
+Route::post(
+    '/custom-bag-request',
+    [FrontendController::class, 'customBagRequest']
+)->name('custom.bag.request');
 require __DIR__.'/auth.php';
