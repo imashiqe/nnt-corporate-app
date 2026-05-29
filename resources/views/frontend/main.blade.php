@@ -413,25 +413,47 @@ function getYoutubeId($url)
     <span class="section-label"><i class="fa-solid fa-newspaper"></i> Blogs</span>
     <h2 class="section-title">Read Our Insights</h2>
     <div class="row g-4 mt-3">
-      <div class="col-md-6 col-lg-4">
-<div class="blog-card" data-aos="fade-up" data-aos-delay="0">
-  <a href="blog-detail.html" class="blog-thumb"><img src="assets/img/blog-1.svg" alt="Top Ten Bag Factories in Bangladesh (2026 Guide)"><span>Uncategorized</span></a>
-  <div class="blog-body">
-    <h3><a href="blog-detail.html">Top Ten Bag Factories in Bangladesh (2026 Guide)</a></h3>
-    <p>Bangladesh is growing as a production hub for custom and corporate bags. Here is a practical ranking style guide.</p>
-    <a class="read-more" href="blog-detail.html">Read More <i class="fa-solid fa-angle-right"></i></a>
-  </div>
-  <div class="blog-meta"><i class="fa-regular fa-calendar"></i> April 15, 2026 <span>-</span> No Comments</div>
-</div></div><div class="col-md-6 col-lg-4">
-<div class="blog-card" data-aos="fade-up" data-aos-delay="80">
-  <a href="blog-detail.html" class="blog-thumb"><img src="assets/img/blog-2.svg" alt="Custom Bag Manufacturing Process Explained: From Design to Delivery"><span>Uncategorized</span></a>
-  <div class="blog-body">
-    <h3><a href="blog-detail.html">Custom Bag Manufacturing Process Explained: From Design to Delivery</a></h3>
-    <p>See the steps from brief, pattern, sample approval, material sourcing, production and final delivery.</p>
-    <a class="read-more" href="blog-detail.html">Read More <i class="fa-solid fa-angle-right"></i></a>
-  </div>
-  <div class="blog-meta"><i class="fa-regular fa-calendar"></i> April 12, 2026 <span>-</span> No Comments</div>
-</div></div><div class="col-md-6 col-lg-4">
+       @foreach($blogs as $blog)
+
+<div class="col-md-6">
+
+    <div class="blog-card">
+
+        <a href="{{ route('blog.details',$blog->slug) }}"
+           class="blog-thumb">
+
+            <img
+                src="{{ asset('storage/'.$blog->image) }}"
+                alt="{{ $blog->title }}"
+            >
+
+            <span>
+                {{ $blog->category->name }}
+            </span>
+
+        </a>
+
+        <div class="blog-body">
+
+            <h3>
+
+                <a href="{{ route('blog.details',$blog->slug) }}">
+                    {{ $blog->title }}
+                </a>
+
+            </h3>
+
+            <p>
+                {{ $blog->short_description }}
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+@endforeach
 <div class="blog-card" data-aos="fade-up" data-aos-delay="160">
   <a href="blog-detail.html" class="blog-thumb"><img src="assets/img/blog-3.svg" alt="All Types of Bags Manufacturer - Bulk, Custom &amp; Wholesale Bags"><span>Uncategorized</span></a>
   <div class="blog-body">

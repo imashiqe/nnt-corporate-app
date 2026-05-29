@@ -14,7 +14,7 @@ Route::get('/services', [FrontendController::class, 'services']);
 Route::get('/custom-bag', [FrontendController::class, 'customBag']);
 Route::get('/blog', [FrontendController::class, 'blog']);
 
-Route::get('/blog/{id}', [FrontendController::class, 'blogDetails']);
+
 
 Route::middleware(['auth'])->prefix('admin')->group(function () {
 
@@ -31,5 +31,12 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('video', VideoController::class);
 
 });
+// for user
+
+Route::get('/blog', [FrontendController::class, 'blog'])
+    ->name('blog');
+
+Route::get('/blog/{slug}', [FrontendController::class, 'blogDetails'])
+    ->name('blog.details');
 
 require __DIR__.'/auth.php';

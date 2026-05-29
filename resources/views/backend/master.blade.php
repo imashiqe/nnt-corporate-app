@@ -31,7 +31,13 @@
     <meta name="supported-color-schemes" content="light dark" />
     <link rel="preload" href="{{ asset('backend/assets/css/adminlte.css') }}" as="style" />
     <!--end::Accessibility Features-->
+<title>@yield('meta_title', 'NNT')</title>
 
+<meta name="description"
+      content="@yield('meta_description')">
+
+<meta name="keywords"
+      content="@yield('meta_keywords')">
     <!--begin::Fonts-->
     <link
       rel="stylesheet"
