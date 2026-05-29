@@ -409,64 +409,92 @@ function getYoutubeId($url)
 {{-- location end --}}
 {{-- BLOG --}}
 <section class="blogs section-padding">
-  <div class="container text-center">
-    <span class="section-label"><i class="fa-solid fa-newspaper"></i> Blogs</span>
-    <h2 class="section-title">Read Our Insights</h2>
-    <div class="row g-4 mt-3">
-       @foreach($blogs as $blog)
+    <div class="container text-center">
 
-<div class="col-md-6">
+        <span class="section-label">
+            <i class="fa-solid fa-newspaper"></i> Blogs
+        </span>
 
-    <div class="blog-card">
+        <h2 class="section-title">
+            Read Our Insights
+        </h2>
 
-        <a href="{{ route('blog.details',$blog->slug) }}"
-           class="blog-thumb">
+      <div class="row g-4 mt-3">
 
-            <img
-                src="{{ asset('storage/'.$blog->image) }}"
-                alt="{{ $blog->title }}"
-            >
+    @foreach($blogs as $blog)
 
-            <span>
-                {{ $blog->category->name }}
-            </span>
+    <div class="col-md-6 col-lg-4">
 
-        </a>
+        <div class="blog-card">
 
-        <div class="blog-body">
+            <a href="{{ route('blog.details',$blog->slug) }}"
+               class="blog-thumb">
 
-            <h3>
+                <img src="{{ asset('storage/'.$blog->image) }}"
+                     alt="{{ $blog->title }}">
 
-                <a href="{{ route('blog.details',$blog->slug) }}">
-                    {{ $blog->title }}
+                <span>
+                    {{ $blog->category->name ?? 'Uncategorized' }}
+                </span>
+
+            </a>
+
+            <div class="blog-body">
+
+                <h3>
+                    <a href="{{ route('blog.details',$blog->slug) }}">
+                        {{ Str::limit($blog->title, 60) }}
+                    </a>
+                </h3>
+
+                <p>
+                    {{ Str::limit($blog->short_description, 120) }}
+                </p>
+
+                <a class="read-more"
+                   href="{{ route('blog.details',$blog->slug) }}">
+
+                    Read More
+                    <i class="fa-solid fa-angle-right"></i>
+
                 </a>
 
-            </h3>
+            </div>
 
-            <p>
-                {{ $blog->short_description }}
-            </p>
+            <div class="blog-meta">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                {{ $blog->created_at->format('M d, Y') }}
+
+                <span>-</span>
+
+                <i class="fa-regular fa-clock"></i>
+
+                {{ $blog->created_at->format('h:i A') }}
+
+            </div>
 
         </div>
 
     </div>
 
+    @endforeach
+
 </div>
 
-@endforeach
-<div class="blog-card" data-aos="fade-up" data-aos-delay="160">
-  <a href="blog-detail.html" class="blog-thumb"><img src="assets/img/blog-3.svg" alt="All Types of Bags Manufacturer - Bulk, Custom &amp; Wholesale Bags"><span>Uncategorized</span></a>
-  <div class="blog-body">
-    <h3><a href="blog-detail.html">All Types of Bags Manufacturer - Bulk, Custom &amp; Wholesale Bags</a></h3>
-    <p>A quick overview of backpacks, office bags, sports bags, delivery bags, jute bags and more.</p>
-    <a class="read-more" href="blog-detail.html">Read More <i class="fa-solid fa-angle-right"></i></a>
-  </div>
-  <div class="blog-meta"><i class="fa-regular fa-calendar"></i> April 9, 2026 <span>-</span> No Comments</div>
-</div></div>
+        <a class="btn btn-theme mt-4"
+           href="{{ route('blog') }}">
+
+            Read More Blogs
+
+            <i class="fa-solid fa-arrow-right ms-2"></i>
+
+        </a>
+
     </div>
-    <a class="btn btn-theme mt-4" href="blog.html">Read More Blogs <i class="fa-solid fa-arrow-right ms-2"></i></a>
-  </div>
 </section>
+{{-- BLOG END --}}
 
 
 <script>

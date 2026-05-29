@@ -84,6 +84,8 @@ class FrontendController extends Controller
         ->latest()
         ->paginate(9);
 
+        
+
     $popularBlogs = Blog::latest()
         ->take(5)
         ->get();

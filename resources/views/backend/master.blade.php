@@ -483,38 +483,80 @@
           
                 {{-- video --}}
               {{-- testimonial --}}
-              <li class="nav-item">
-                <a href="#" class="nav-link">
-                  <i class="nav-icon bi bi-people-fill"></i>
-                  <p>
-                  Testimonial
-                    <i class="nav-arrow bi bi-chevron-right"></i>
-                  </p>
-                </a>
-                <ul class="nav nav-treeview">
-                  <li class="nav-item">
-                    <a href="{{ route('testimonial.create') }}" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>Create</p>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="{{ route('testimonial.index') }}" class="nav-link">
-                      <i class="nav-icon bi bi-circle"></i>
-                      <p>View</p>
-                    </a>
-                  </li>
-                  
-                </ul>
-            </ul>
-            </li>
-            </li>
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon bi bi-people-fill"></i>
+        <p>
+            Testimonial
+            <i class="nav-arrow bi bi-chevron-right"></i>
+        </p>
+    </a>
+
+    <ul class="nav nav-treeview">
+
+        <li class="nav-item">
+            <a href="{{ route('testimonial.create') }}"
+               class="nav-link">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>Create</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="{{ route('testimonial.index') }}"
+               class="nav-link">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>View</p>
+            </a>
+        </li>
+
+    </ul>
+</li>
 
             
 {{-- video --}}
-            
-            
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon bi bi-people-fill"></i>
+        <p>
+            Blog Management
+            <i class="nav-arrow bi bi-chevron-right"></i>
+        </p>
+    </a>
 
+    <ul class="nav nav-treeview">
+  <li class="nav-item">
+    <a href="{{ route('blog-category.index') }}"
+       class="nav-link">
+
+        <i class="nav-icon bi bi-tags-fill"></i>
+
+        <p>
+            Blog Categories
+        </p>
+
+    </a>
+</li> 
+        <li class="nav-item">
+            <a href="{{ route('blog.create') }}"
+               class="nav-link">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>Create</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a href="{{ route('blog.index') }}"
+               class="nav-link">
+                <i class="nav-icon bi bi-circle"></i>
+                <p>View</p>
+            </a>
+        </li>
+
+    </ul>
+</li>
+            
+           
            
             <!--end::Sidebar Menu-->
           </nav>
@@ -533,7 +575,7 @@
         <!--begin::Copyright-->
         <strong>
           Copyright &copy; {{ date('Y') }}&nbsp;
-          <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
+          <a href="https://www.tantsoft.com" class="text-decoration-none">Tantsoft</a>.
         </strong>
         All rights reserved.
         <!--end::Copyright-->

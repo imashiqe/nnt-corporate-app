@@ -6,8 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogCategory extends Model
 {
+ protected $fillable = [
+        'name',
+        'slug',
+        'meta_title',
+        'meta_description'
+    ];
+
     public function blogs()
-{
-    return $this->hasMany(Blog::class);
-}
+    {
+        return $this->hasMany(Blog::class);
+    }
 }

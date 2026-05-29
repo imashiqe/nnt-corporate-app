@@ -4,62 +4,82 @@ namespace App\Http\Controllers;
 
 use App\Models\BlogCategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class BlogCategoryController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        $categories = BlogCategory::latest()
+            ->paginate(10);
+
+        return view(
+            'backend.blog-category.index',
+            compact('categories')
+        );
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        return view(
+            'backend.blog-category.create'
+        );
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|unique:blog_categories,name'
+        ]);
+
+        BlogCategory::create([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+            'meta_title' => $request->meta_title,
+            'meta_description' => $request->meta_description,
+        ]);
+
+        return redirect()
+            ->route('blog-category.index')
+            ->with('success','Category Created');
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(BlogCategory $blogCategory)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
     public function edit(BlogCategory $blogCategory)
     {
-        //
+        return view(
+            'backend.blog-category.edit',
+            compact('blogCategory')
+        );
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, BlogCategory $blogCategory)
+    public function update(
+        Request $request,
+        BlogCategory $blogCategory
+    )
     {
-        //
+        $request->validate([
+            'name' => 'required'
+        ]);
+
+        $blogCategory->update([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name),
+            'meta_title' => $request->meta_title,
+            'meta_description' => $request->meta_description,
+        ]);
+
+        return redirect()
+            ->route('blog-category.index')
+            ->with('success','Category Updated');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(BlogCategory $blogCategory)
+    public function destroy(
+        BlogCategory $blogCategory
+    )
     {
-        //
+        $blogCategory->delete();
+
+        return back()
+            ->with('success','Category Deleted');
     }
 }

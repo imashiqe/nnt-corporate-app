@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\BlogCategoryController;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GalleryController;
@@ -29,6 +31,9 @@ Route::middleware(['auth'])->prefix('admin')->group(function () {
     Route::resource('testimonial', TestimonialController::class);
     Route::resource('client', ClientController::class);
     Route::resource('video', VideoController::class);
+    Route::resource('blog-category', BlogCategoryController::class);
+    Route::resource('blog', BlogController::class);
+
 
 });
 // for user

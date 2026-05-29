@@ -6,11 +6,24 @@ use Illuminate\Database\Eloquent\Model;
 
 class Blog extends Model
 {
-   public function category()
-{
-    return $this->belongsTo(
-        BlogCategory::class,
-        'blog_category_id'
-    );
-}
+       protected $fillable = [
+        'blog_category_id',
+        'title',
+        'slug',
+        'image',
+        'short_description',
+        'content',
+        'meta_title',
+        'meta_description',
+        'meta_keywords',
+        'status'
+    ];
+
+    public function category()
+    {
+        return $this->belongsTo(
+            BlogCategory::class,
+            'blog_category_id'
+        );
+    }
 }
